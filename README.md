@@ -214,32 +214,3 @@ El notebook permite modificar fácilmente:
 2. **Metropolis, N., et al.** (1953). "Equation of state calculations by fast computing machines." *Journal of Chemical Physics*, 21(6), 1087-1092.
 
 3. **Fisher, M. E., & Barber, M. N.** (1972). "Scaling theory for finite-size effects in the critical region." *Physical Review Letters*, 28(23), 1516-1519.
-
-### Recursos Técnicos
-
-- [Documentación NumPy](https://numpy.org/doc/)
-- [Documentación Numba](https://numba.pydata.org/)
-- [Matplotlib Gallery](https://matplotlib.org/stable/gallery/)
-
-## Autor
-
-**[Tu Nombre]**
-- Email: [tu.email@ejemplo.com]
-- GitHub: [@ItzWhole](https://github.com/ItzWhole)
-- LinkedIn: [Tu Perfil LinkedIn]
-
----
-
-## Licencia
-
-Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
-
-## Agradecimientos
-
-- Profesores y colaboradores del curso de Física Teórica 3
-- Comunidad científica por las implementaciones de referencia
-- Desarrolladores de las librerías científicas de Python
-
----
-
-*Proyecto desarrollado como parte del curso de Física Teórica 3 - Simulaciones computacionales en mecánica estadística*
