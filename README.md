@@ -1,6 +1,5 @@
 # Simulación Monte Carlo del Modelo de Ising 2D
 
-![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
 
 Una implementación completa del modelo de Ising bidimensional utilizando el algoritmo de Metropolis Monte Carlo para estudiar transiciones de fase magnéticas y fenómenos críticos.
 
