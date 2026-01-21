@@ -55,7 +55,7 @@ Se implementan condiciones de contorno periódicas para minimizar efectos de bor
 
 ## Resultados
 
-### 1. Proceso de Termalización
+### Proceso de Termalización
 
 Partiendo de un cierto estado inicial, se estudia cuántos pasos son necesarios para que el sistema llegue al equilibrio. Para eso, graficamos la magnetización y la energía por partícula en función del paso; el equilibrio se alcanza cuando estas cantidades empiezan a fluctuar alrededor de un valor fijo, en lugar de ser netamente crecientes o decrecientes. El número de pasos necesarios para alcanzar el equilibrio dependerá de la temperatura. Se utilizó una red de 30x30 y un β=1.
 
@@ -67,21 +67,16 @@ El sistema alcanza el equilibrio térmico después de ~10⁶ pasos Monte Carlo, 
 Si, por otro lado, se usa una temperatura mayor a la temperatura crítica (β=10), se puede ver un comportamiento muy distinto, donde la agitación termica le gana a la fuerza que alinea los espines
 <img width="1470" height="754" alt="image" src="https://github.com/user-attachments/assets/638720b7-c283-4951-a636-975a938d3008" />
 Ahora no hay magnetización media apreciable y los espines apuntan en direcciones aleatorias.
+Si calculamos la magnetización media en función de la temperatura, se obtiene el siguiente gráfico
+<img width="886" height="643" alt="image" src="https://github.com/user-attachments/assets/b4dc3592-e064-48f4-a553-9614ea9f9ed6" />
 
-### 2. Transición de Fase
 
-La magnetización muestra una transición suave pero pronunciada cerca de T_c, característica de una transición de fase de segundo orden en sistemas finitos.
-
-### 3. Observables Termodinámicos
+### Observables Termodinámicos
 Se analizó el valor de la suceptibilidad magnética y el calor específico en función de la temperatura. En teoría, ambas magnitudes deberían experimentar un pico en la temperatura crítica. Estos resultados predicen temperaturas críticas a 2.62 y 2.34 respectivamente.
 ![Energía vs Temperatura](figuras_new/fig_3.png)
 
-### 4. Susceptibilidad y Calor Específico
 
-Ambas cantidades muestran picos pronunciados en T_c, indicando la presencia de fluctuaciones críticas. Los máximos permiten estimar la temperatura crítica.
-
-
-### 6. Longitud de Correlación
+### Longitud de Correlación
 
 
 La función de correlación g(r) = ⟨σᵢσⱼ⟩ - ⟨σᵢ⟩⟨σⱼ⟩ sigue un decaimiento exponencial g(r) ∝ exp(-r/ξ), donde ξ es la longitud de correlación. A continuación se muestra la forma típica de esta función de correlacion a 3 regimenes de temperatura distintos
