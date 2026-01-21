@@ -3,7 +3,7 @@
 Este proyecto implementa una simulación Monte Carlo del modelo de Ising en 2D para estudiar la transición de fase ferromagnética que ocurre cerca de la temperatura crítica T ≈ 2.27 K. La simulación utiliza el algoritmo de Metropolis para generar configuraciones de equilibrio térmico y calcular observables termodinámicos como magnetización, energía, susceptibilidad magnética y calor específico.
 
 
-![Transición de Fase](figuras_new/fig_2.png)
+
 
 ## Fundamentos Físicos
 
@@ -57,11 +57,16 @@ Se implementan condiciones de contorno periódicas para minimizar efectos de bor
 
 ### 1. Proceso de Termalización
 
-Partiendo de un cierto estado inicial, se estudia cuántos pasos son necesarios para que el sistema llegue al equilibrio. Para eso, graficamos la magnetización y la energía por partícula en función del paso; el equilibrio se alcanza cuando estas cantidades empiezan a fluctuar alrededor de un valor fijo, en lugar de ser netamente crecientes o decrecientes. El número de pasos necesarios para alcanzar el equilibrio dependerá de la temperatura. Se utilizó una red de 30x30.
+Partiendo de un cierto estado inicial, se estudia cuántos pasos son necesarios para que el sistema llegue al equilibrio. Para eso, graficamos la magnetización y la energía por partícula en función del paso; el equilibrio se alcanza cuando estas cantidades empiezan a fluctuar alrededor de un valor fijo, en lugar de ser netamente crecientes o decrecientes. El número de pasos necesarios para alcanzar el equilibrio dependerá de la temperatura. Se utilizó una red de 30x30 y un β=1.
 
 
 ![Termalización](figuras_new/fig_1.png)
-El sistema alcanza el equilibrio térmico después de ~10⁶ pasos Monte Carlo, como se observa en la estabilización de la magnetización y energía.
+El sistema alcanza el equilibrio térmico después de ~10⁶ pasos Monte Carlo, como se observa en la estabilización de la magnetización y energía. A la derecha se muestra el estado final, donde se puede ver que todos los espines apuntan en una misma dirección.
+
+
+Si, por otro lado, se usa una temperatura mayor a la temperatura crítica (β=10), se puede ver un comportamiento muy distinto, donde la agitación termica le gana a la fuerza que alinea los espines
+<img width="1470" height="754" alt="image" src="https://github.com/user-attachments/assets/638720b7-c283-4951-a636-975a938d3008" />
+Ahora no hay magnetización media apreciable y los espines apuntan en direcciones aleatorias.
 
 ### 2. Transición de Fase
 
