@@ -102,7 +102,7 @@ El número de pasos necesarios para alcanzar el equilibrio dependerá de la temp
 """
 
 L=30 #Lado de la red
-beta=1
+beta=0.1
 
 nequilibrio=100000 #Numero de pasos tentativo para llegar al equilibrio
 
@@ -135,6 +135,66 @@ plt.xlabel('paso')
 plt.subplot(1,2,2)
 plt.imshow(S) #plotea el estado final, dandole un color al 1 y otro al -1
 plt.show()
+#%%
+# ============================
+# Barrido en temperatura
+# ============================
+
+L = 30
+N = L * L
+
+temps = np.linspace(1.5, 3.5, 25)   # barrido uniforme en T
+betas = 1 / temps
+
+nequilibrio = 100000
+nmedidas = 30000
+niter = 10   # iteraciones independientes por temperatura
+
+mag_mean = np.zeros(len(temps))
+mag_std  = np.zeros(len(temps))
+
+for iT, (T, beta) in enumerate(zip(temps, betas)):
+
+    prob = np.array([np.exp(-4*beta), np.exp(-8*beta)])
+    mags_iter = np.zeros(niter)
+
+    for it in range(niter):
+
+        # estado inicial aleatorio
+        S = 2*np.random.randint(2, size=(L,L)) - 1
+
+        # --- Equilibración ---
+        for _ in range(nequilibrio):
+            S, dm, de = metropolis(S, prob)
+
+        # --- Medición ---
+        m_acc = 0.0
+        for _ in range(nmedidas):
+            S, dm, de = metropolis(S, prob)
+            m_acc += abs(np.mean(S))
+
+        mags_iter[it] = m_acc / nmedidas
+
+    mag_mean[iT] = np.mean(mags_iter)
+    mag_std[iT]  = np.std(mags_iter)
+
+    print(f"T={T:.3f}, <|m|>={mag_mean[iT]:.3f} ± {mag_std[iT]:.3f}")
+
+# ============================
+# Gráfico
+# ============================
+#%%
+plt.figure(figsize=(7,5))
+plt.errorbar(temps, mag_mean, fmt='o-', capsize=3)
+plt.axvline(2.269, color='r', ls='--', label=r'$T_c$ exacto (2D)')
+plt.xlabel('Temperatura T')
+plt.ylabel(r'$\langle |m| \rangle$')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+
+
 #%%
 """El código presentado genera con baja frecuencia estados ilógicos a betas altos. Estos
 estados consisten de espines completamente alineados a excepción de una banda de espines con orientación opuesta. Estos
