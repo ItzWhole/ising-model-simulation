@@ -70,8 +70,6 @@ Ahora no hay magnetización media apreciable y los espines apuntan en direccione
 
 ### 2. Transición de Fase
 
-![Magnetización vs Temperatura](figuras_new/fig_2.png)
-
 La magnetización muestra una transición suave pero pronunciada cerca de T_c, característica de una transición de fase de segundo orden en sistemas finitos.
 
 ### 3. Observables Termodinámicos
