@@ -75,10 +75,8 @@ Ahora no hay magnetización media apreciable y los espines apuntan en direccione
 La magnetización muestra una transición suave pero pronunciada cerca de T_c, característica de una transición de fase de segundo orden en sistemas finitos.
 
 ### 3. Observables Termodinámicos
-
+Se analizó el valor de la energía por partícula y la suceptibilidad magnética en función de la temperatura. Se puede observar como en la temperatura crítica (marcada en rojo) se detecta un pico indicativo de una divergencia.
 ![Energía vs Temperatura](figuras_new/fig_3.png)
-
-La energía por partícula exhibe un cambio de pendiente en la región crítica, reflejando el cambio en la estructura de correlaciones.
 
 ### 4. Susceptibilidad y Calor Específico
 
