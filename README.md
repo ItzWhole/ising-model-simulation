@@ -1,21 +1,9 @@
-# Simulación Monte Carlo del Modelo de Ising 2D
-
-
-Una implementación completa del modelo de Ising bidimensional utilizando el algoritmo de Metropolis Monte Carlo para estudiar transiciones de fase magnéticas y fenómenos críticos.
-
-![Transición de Fase](figuras_new/fig_2.png)
-
 ## Resumen del Proyecto
 
 Este proyecto implementa una simulación Monte Carlo del modelo de Ising en 2D para estudiar la transición de fase ferromagnética que ocurre cerca de la temperatura crítica T ≈ 2.27 K. La simulación utiliza el algoritmo de Metropolis para generar configuraciones de equilibrio térmico y calcular observables termodinámicos como magnetización, energía, susceptibilidad magnética y calor específico.
 
-### Características Principales
 
-- **Algoritmo de Metropolis optimizado** con compilación JIT usando Numba
-- **Análisis completo de transición de fase** con cálculo de temperatura crítica
-- **Estudio de correlaciones espaciales** y longitud de correlación
-- **Análisis de finite-size scaling** para diferentes tamaños de red
-- **Visualizaciones profesionales** de todos los observables físicos
+![Transición de Fase](figuras_new/fig_2.png)
 
 ## Fundamentos Físicos
 
@@ -69,8 +57,10 @@ Se implementan condiciones de contorno periódicas para minimizar efectos de bor
 
 ### 1. Proceso de Termalización
 
-![Termalización](figuras_new/fig_1.png)
+Partiendo de un cierto estado inicial, se estudia cuántos pasos son necesarios para que el sistema llegue al equilibrio. Para eso, graficamos la magnetización y la energía por partícula en función del paso; el equilibrio se alcanza cuando estas cantidades empiezan a fluctuar alrededor de un valor fijo, en lugar de ser netamente crecientes o decrecientes. El número de pasos necesarios para alcanzar el equilibrio dependerá de la temperatura. Se utilizó una red de 30x30.
 
+
+![Termalización](figuras_new/fig_1.png)
 El sistema alcanza el equilibrio térmico después de ~10⁶ pasos Monte Carlo, como se observa en la estabilización de la magnetización y energía.
 
 ### 2. Transición de Fase
