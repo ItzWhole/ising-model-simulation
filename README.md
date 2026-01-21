@@ -82,11 +82,6 @@ Se analizó el valor de la suceptibilidad magnética y el calor específico en f
 
 Ambas cantidades muestran picos pronunciados en T_c, indicando la presencia de fluctuaciones críticas. Los máximos permiten estimar la temperatura crítica.
 
-### 5. Configuraciones de Espines
-
-![Configuraciones de Espines](figuras_new/fig_5.png)
-
-Visualización de las configuraciones típicas a diferentes temperaturas, mostrando la transición del orden magnético al desorden térmico.
 
 ### 6. Longitud de Correlación
 
