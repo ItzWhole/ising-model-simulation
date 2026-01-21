@@ -85,13 +85,18 @@ Ambas cantidades muestran picos pronunciados en T_c, indicando la presencia de f
 
 ### 6. Longitud de Correlación
 
-![Función de Correlación](figuras_new/fig_4.png)
 
-La función de correlación g(r) = ⟨σᵢσⱼ⟩ - ⟨σᵢ⟩⟨σⱼ⟩ sigue un decaimiento exponencial g(r) ∝ exp(-r/ξ), donde ξ es la longitud de correlación. Cuando se analiza el valor de este ξ se encuentra un pico en la temperatura 2.40 simbolizando criticalidad.
+La función de correlación g(r) = ⟨σᵢσⱼ⟩ - ⟨σᵢ⟩⟨σⱼ⟩ sigue un decaimiento exponencial g(r) ∝ exp(-r/ξ), donde ξ es la longitud de correlación. A continuación se muestra la forma típica de esta función de correlacion a 3 regimenes de temperatura distintos
+
+![Longitud de Correlación](figuras_new/fig_5.png)
+
+
+Cuando se analiza el valor de ξ se encuentra un pico en la temperatura 2.40, indicando criticalidad.
 
 ### 7. Longitud de Correlación
 
-![Longitud de Correlación](figuras_new/fig_5.png)
+
+![Función de Correlación](figuras_new/fig_4.png)
 
 La longitud de correlación diverge al aproximarse a la temperatura crítica, comportamiento característico de las transiciones de fase continuas.
 
