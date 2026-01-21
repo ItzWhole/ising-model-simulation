@@ -1,7 +1,6 @@
 ## Resumen del Proyecto
 
-Este proyecto implementa una simulación Monte Carlo del modelo de Ising en 2D para estudiar la transición de fase ferromagnética que ocurre cerca de la temperatura crítica T ≈ 2.27 K. La simulación utiliza el algoritmo de Metropolis para generar configuraciones de equilibrio térmico y calcular observables termodinámicos como magnetización, energía, susceptibilidad magnética y calor específico.
-
+Este proyecto implementa una simulación Monte Carlo del modelo de Ising en 2D para estudiar transiciones de fase y fenómenos críticos. Se utilizó el algoritmo de Metropolis para generar configuraciones de equilibrio y estimar observables termodinámicos, analizando además efectos de tamaño finito y la estabilidad estadística de distintos métodos de estimación de la temperatura crítica.
 
 
 
@@ -87,6 +86,9 @@ La función de correlación g(r) = ⟨σᵢσⱼ⟩ - ⟨σᵢ⟩⟨σⱼ⟩ sig
 Cuando se analiza el valor de ξ se encuentra un pico en la temperatura 2.40, indicando criticalidad.
 ![Longitud de Correlación](figuras_new/fig_5.png)
 
+### Finite-Size Scaling
+Se analizó el efecto del tamaño del sistema en la estimación de la temperatura crítica del modelo de Ising bidimensional. Para distintos tamaños de red (L=15,30,60,120) se realizaron barridos en temperatura y se identificó, en cada caso, la temperatura asociada al máximo de la susceptibilidad magnética. A partir de un ajuste lineal en función de 1/L, se extrapoló la temperatura crítica al límite termodinámico, obteniendo un valor del orden de Tc≈2.91, lo que evidencia la sensibilidad del método al ruido estadístico y a las fluctuaciones críticas para tamaños finitos.
+
 ## Resultados Principales
 
 ### Estimaciones de Temperatura Crítica
@@ -98,10 +100,6 @@ Cuando se analiza el valor de ξ se encuentra un pico en la temperatura 2.40, in
 | Longitud de Correlación | 2.40 | +0.13 |
 | Finite-Size Scaling | 2.91 | +0.64 |
 | **Onsager (exacto)** | **2.269** | **0.00** |
-
-### Análisis de Finite-Size Scaling
-
-Utilizando la relación T_c(L) = T_c + a/L para diferentes tamaños de red (L = 15, 30, 60, 120), se extrapoló la temperatura crítica del límite termodinámico.
 
 ## Instalación y Uso
 
@@ -140,45 +138,6 @@ jupyter notebook
 # Navegar a: notebook/Ising_Simulation.ipynb
 ```
 
-### Parámetros Configurables
-
-El notebook permite modificar fácilmente:
-- **L**: Tamaño de la red (por defecto: 30×30)
-- **nequilibrio**: Pasos de termalización (por defecto: 10⁷)
-- **npromedio**: Pasos para promedios (por defecto: 10⁵)
-- **Rango de temperaturas**: Para análisis de transición de fase
-
-### Requisitos Computacionales
-
-- **Memoria RAM**: ~2 GB para redes 30×30
-- **Tiempo de ejecución**: 
-  - Termalización: ~30 minutos por temperatura
-  - Análisis completo: 2-4 horas
-- **Almacenamiento**: ~50 MB para resultados y figuras
-
-## Aspectos Técnicos Destacados
-
-### Habilidades Computacionales
-
-- **Métodos Monte Carlo**: Implementación del algoritmo de Metropolis
-- **Mecánica Estadística**: Cálculo de observables termodinámicos
-- **Optimización Numérica**: Uso de Numba para compilación JIT
-- **Análisis de Datos**: Procesamiento estadístico de series temporales
-- **Visualización Científica**: Matplotlib para gráficos profesionales
-
-### Técnicas Avanzadas
-
-- **Finite-Size Scaling**: Extrapolación al límite termodinámico
-- **Análisis de Correlaciones**: Cálculo de funciones de correlación espacial
-- **Ajuste de Curvas**: Determinación de parámetros críticos
-- **Control de Errores**: Análisis estadístico de incertidumbres
-
-### Optimizaciones de Rendimiento
-
-- **Compilación JIT**: Aceleración 50-100× con Numba
-- **Algoritmos Eficientes**: Cálculo local de cambios de energía
-- **Gestión de Memoria**: Uso eficiente de arrays NumPy
-- **Paralelización**: Preparado para extensión a múltiples cores
 
 ## Referencias
 
