@@ -80,8 +80,6 @@ Se analizó el valor de la suceptibilidad magnética y el calor específico en f
 
 ### 4. Susceptibilidad y Calor Específico
 
-![Susceptibilidad y Calor Específico](figuras_new/fig_4.png)
-
 Ambas cantidades muestran picos pronunciados en T_c, indicando la presencia de fluctuaciones críticas. Los máximos permiten estimar la temperatura crítica.
 
 ### 5. Configuraciones de Espines
@@ -90,11 +88,11 @@ Ambas cantidades muestran picos pronunciados en T_c, indicando la presencia de f
 
 Visualización de las configuraciones típicas a diferentes temperaturas, mostrando la transición del orden magnético al desorden térmico.
 
-### 6. Función de Correlación
+### 6. Longitud de Correlación
 
 ![Función de Correlación](figuras_new/fig_6.png)
 
-La función de correlación g(r) = ⟨σᵢσⱼ⟩ - ⟨σᵢ⟩⟨σⱼ⟩ sigue un decaimiento exponencial g(r) ∝ exp(-r/ξ), donde ξ es la longitud de correlación.
+La función de correlación g(r) = ⟨σᵢσⱼ⟩ - ⟨σᵢ⟩⟨σⱼ⟩ sigue un decaimiento exponencial g(r) ∝ exp(-r/ξ), donde ξ es la longitud de correlación. Cuando se analiza el valor de este ξ se encuentra un pico en la temperatura 2.40 simbolizando criticalidad.
 
 ### 7. Longitud de Correlación
 
