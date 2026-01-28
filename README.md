@@ -1,3 +1,14 @@
+## Ising Model – Monte Carlo Simulation
+
+This repository contains a Monte Carlo simulation of the 2D Ising model,
+implemented as part of my Physics degree at the University of Buenos Aires.
+
+The project focuses on studying magnetization, phase transitions, and critical behavior
+using the Metropolis algorithm.
+
+⚠️ Note: The rest of the documentation is in Spanish.
+
+
 ## Resumen del Proyecto
 
 Este proyecto implementa una simulación Monte Carlo del modelo de Ising en 2D para estudiar transiciones de fase y fenómenos críticos. Se utilizó el algoritmo de Metropolis para generar configuraciones de equilibrio y estimar observables termodinámicos, analizando además efectos de tamaño finito y la estabilidad estadística de distintos métodos de estimación de la temperatura crítica.
